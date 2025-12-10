@@ -4,7 +4,7 @@
 **Trabalho Final – CMP 1170 – Computação Gráfica**  
 **PUC Goiás** • Prof. MSc. Fernando Gonçalves Abadia • 2025  
 
-![Preview do Jogo](preview.jpg)
+![Preview do Jogo](preview.png)
 
 > Jogo 3D em primeira pessoa desenvolvido 100% com **Three.js r154** + JavaScript puro (ES6 modules).  
 > Sem Unity, sem Godot, sem Babylon.js — apenas código limpo rodando direto no navegador.
