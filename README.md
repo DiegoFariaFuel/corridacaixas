@@ -52,10 +52,10 @@ graph TD
         Scene --> Renderer[WebGL + Sombras + ACESFilmic]
     end
 
-    LOOP --> Renderer --> Canvas[canvas id="c"]
+    LOOP --> Renderer --> Canvas[canvas id=c]
 
     style LOOP fill:#2dd4bf,stroke:#fff,color:#000,font-weight:bold
-    style Renderer fill:#0d9488a6,stroke:#fff,color:#fff
+    style Renderer fill:#0d9488,stroke:#fff,color:#fff
     style Canvas fill:#000,stroke:#2dd4bf,stroke-width:4px
 
 ```
