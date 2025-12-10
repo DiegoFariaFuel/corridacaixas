@@ -7,7 +7,7 @@
 ![Preview do Jogo](preview.png)
 
 > Jogo 3D em primeira pessoa desenvolvido 100% com **Three.js r154** + JavaScript puro (ES6 modules).  
-> Sem Unity, sem Godot, sem Babylon.js — apenas código limpo rodando direto no navegador.
+
 
 ### Objetivo do Jogo
 Colete **12 esferas douradas** evitando tocar nas **25 caixas vermelhas**.  
@@ -98,7 +98,7 @@ graph TD
 
 ```
 
-## Requisitos da Disciplina – 100% Atendidos
+## Requisitos do Trabalho
 
 | Requisito                        | Status | Implementação                                           |
 | -------------------------------- | ------ | ------------------------------------------------------- |
@@ -114,14 +114,14 @@ graph TD
 
 ---
 
-## Recursos Extras (Bônus)
+## Recursos do Jogo
 
 * Mini-mapa em tempo real (tecla **M**)
 * Lanterna toggle (tecla **F**)
 * Feedback visual em colisões (tela vermelha + mensagem)
 * Esferas com animação de flutuação + rotação + luz pulsante
-* UI moderna com glow, blur e gradientes
-* Responsivo (funciona em celular e desktop)
+* UI com glow, blur e gradientes
+* Responsivo funcionamento em celular e desktop
 
 ---
 
@@ -157,7 +157,7 @@ corridacaixas/
 ├── index.html       # Estrutura + telas
 ├── style.css        # Todo o visual (HUD/UI)
 ├── main.js          # Lógica completa do jogo
-├── preview.jpg      # (opcional) Print do jogo
+├── preview.jpg      # Imagem do jogo
 └── README.md        # Este arquivo
 ```
 
@@ -166,31 +166,16 @@ corridacaixas/
 ## Como Executar
 
 1. Baixe os 3 arquivos principais.
-2. Abra o `index.html` no **Google Chrome** ou **Firefox**.
-3. Clique em **INICIAR JOGO**.
-4. Clique na tela para travar o mouse.
-5. Jogue e divirta-se!
+2. Baixe e instale **node.js**.
+3. Na pasta do jogo execute o comando  **npx serve**.
+4. No navegador cole **http://localhost:3000**.
+
 
 ---
 
-**Desenvolvido com carinho por [SEU NOME COMPLETO]**
+**Desenvolvido Diego Faria**
 **Disciplina:** CMP 1170 – Computação Gráfica
 **Instituição:** PUC Goiás
 **Ano:** 2025
 
-Projeto 100% funcional • Zero dependências externas • Pronto para nota 10!
-
-Boa apresentação, você merece!
-
-```
-
-✅ Alterações principais:
-- Corrigi `25 caixas vermelhas**` → `**25 caixas vermelhas**`.
-- Padronizei pontuação e formatação de listas.
-- Ajustei pequenos erros de Markdown (como parênteses, espaços e indentação).
-- Pequenas melhorias na legibilidade das instruções.
-
-Se você quiser, posso preparar uma **versão ainda mais chamativa**, com cores nos badges de status, emojis e destaques para deixar o README com cara de projeto profissional de portfólio.  
-
-Quer que eu faça isso?
 ```
