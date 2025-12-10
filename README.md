@@ -34,51 +34,13 @@ graph TD
         S1[Configuração da Cena]
         S2[Iluminação Avançada]
         S3[Spawners Procedurais]
-        S4[Controles + Pointer Lock]
-        S5[Física & Colisão]
-        S6[HUD + Feedback]
-        S7[Mini-mapa 2D]
-        S8[Game State]
         LOOP[Game Loop - tick()]
         C --> S1
         C --> S2
         C --> S3
-        C --> S4
-        C --> S5
-        C --> S6
-        C --> S7
-        C --> S8
         C --> LOOP
     end
 
-    subgraph "Three.js Scene"
-        Scene[Scene + Fog Exp2]
-        Lights[DirectionalLight, SpotLight, PointLights, AmbientLight]
-        Floor[Chão PBR 120x120]
-        Grid[GridHelper]
-        Walls[Paredes Invisíveis]
-        Player[playerGroup]
-        Obstacles[25 Caixas Vermelhas]
-        Collectibles[12 Esferas Douradas + Luzes]
-        Camera[Camera Primeira Pessoa]
-        Renderer[WebGL + Sombras + ACESFilmic]
-        S1 --> Scene
-        S2 --> Lights
-        S3 --> Floor
-        S3 --> Grid
-        S3 --> Walls
-        S3 --> Player
-        S3 --> Obstacles
-        S3 --> Collectibles
-        Scene --> Camera
-        Scene --> Renderer
-    end
-
-    LOOP --> Renderer --> Canvas[canvas id=c]
-
-    style LOOP fill:#2dd4bf,stroke:#fff,color:#000,font-weight:bold
-    style Renderer fill:#0d9488,stroke:#fff,color:#fff
-    style Canvas fill:#000,stroke:#2dd4bf,stroke-width:4px
 
 ```
 
