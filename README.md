@@ -16,7 +16,7 @@ Você tem apenas **3 vidas** e **3 minutos** para vencer!
 
 ## Diagrama da Arquitetura do Jogo
 
-```mermaid
+
 graph TD
     A[index.html<br>Telas + UI] -->|carrega| B[style.css<br>HUD + Design]
     A -->|import module| C[main.js<br>Lógica completa]
@@ -57,7 +57,7 @@ graph TD
     style LOOP fill:#2dd4bf,stroke:#fff,color:#000,font-weight:bold
     style Renderer fill:#0d9488a6,stroke:#fff,color:#fff
     style Canvas fill:#000,stroke:#2dd4bf,stroke-width:4px
-````
+
 
 ---
 
