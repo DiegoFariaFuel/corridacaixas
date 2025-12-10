@@ -1,2 +1,94 @@
 # corridacaixas
 Corrida de Caixas
+
+1. MODELAGEM GEOMÉTRICA
+
+✅ Uso de primitivas básicas (BoxGeometry, SphereGeometry, PlaneGeometry)
+✅ Organização hierárquica com THREE.Group (playerGroup)
+✅ Instanciamento de objetos (25 obstáculos, 12 coletáveis)
+✅ Malhas poligonais com diferentes níveis de detalhe
+
+2. MATERIAIS PBR (Physically Based Rendering)
+
+✅ MeshStandardMaterial com propriedades físicas:
+
+color (albedo/diffuse)
+roughness (aspereza da superfície)
+metalness (metalicidade)
+emissive (emissão de luz)
+emissiveIntensity (intensidade emissiva)
+
+3. ILUMINAÇÃO AVANÇADA
+
+✅ Luz Direcional (DirectionalLight) - simula sol com sombras
+✅ SpotLight dinâmica - lanterna que segue o jogador (REQUISITO)
+✅ Luz ambiente (AmbientLight)
+✅ Luz pontual de preenchimento (PointLight)
+✅ Luzes pontuais nos coletáveis (efeito de brilho)
+✅ Sistema de sombras (PCFSoftShadowMap)
+✅ Configuração de alcance, ângulo e energia
+
+4. TEXTURIZAÇÃO E MAPEAMENTO
+
+✅ Aplicação de cores e propriedades PBR
+✅ Sem estiramentos (geometrias procedurais)
+✅ Materiais adequados ao tipo de superfície
+
+5. HUD FUNCIONAL E COMPLETO
+
+✅ Vidas (❤️) com ícone
+✅ Pontuação (⭐) atualizada em tempo real
+✅ Tempo (⏱️) de jogo
+✅ Barra de progresso visual (0-100%)
+✅ Status da lanterna (On/Off)
+✅ Mensagens de feedback contextuais
+✅ Mini-mapa (tecla M) com radar
+✅ Crosshair centralizado
+✅ Design com paleta de cores coerente (azul-turquesa)
+✅ Não obstrui a jogabilidade
+
+6. EXECUÇÃO COMPLETA
+
+✅ Tela inicial com instruções
+✅ Jogabilidade funcional (movimento, pulo, colisão)
+✅ Condições de vitória: coletar 12 esferas
+✅ Condições de derrota: perder 3 vidas
+✅ Tela de encerramento com estatísticas
+✅ Sistema de reinício
+
+7. CONCEITOS DE CG APLICADOS
+
+✅ Transformações hierárquicas (translate, rotate)
+✅ Sistema de coordenadas 3D
+✅ Detecção de colisão (circular XZ)
+✅ Física básica (gravidade, pulo)
+✅ Controle de câmera em primeira pessoa
+✅ Pointer Lock (captura de mouse)
+✅ Fog (névoa exponencial)
+✅ Tone Mapping (ACES Filmic)
+
+8. DESIGN VISUAL
+
+✅ Paleta de cores harmônica (azul-turquesa + dourado + vermelho)
+✅ Feedback visual em colisões
+✅ Animações (flutuação, rotação, pulsação de luzes)
+✅ Transições suaves na UI
+✅ Efeitos de glow e sombras
+
+9. DOCUMENTAÇÃO
+
+✅ Código comentado com seções claras
+✅ Créditos da disciplina na tela inicial
+✅ Informações técnicas no HUD (Three.js r154, PBR, Dynamic Lighting)
+
+
+IMPLEMENTADOS:
+
+Mini-mapa funcional (tecla M)
+Sistema de feedback contextual
+Múltiplas fontes de luz com propósitos diferentes
+Animações procedurais (flutuação, rotação)
+Barra de progresso visual
+Estatísticas finais detalhadas
+Controles responsivos (WASD + Mouse)
+Limitação de área com paredes invisíveis

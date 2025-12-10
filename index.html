@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corrida das Caixas 3D - Trabalho CMP 1170</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <div id="ui-start" class="overlay center">
+    <h1>CORRIDA DAS CAIXAS 3D</h1>
+    <p class="subtitle">Trabalho de Computação Gráfica - CMP 1170</p>
+    
+    <div class="info-box">
+      <p style="margin-bottom:15px;color:#2dd4bf;font-weight:700">OBJETIVO DO JOGO</p>
+      <p>Colete <strong>12 esferas douradas</strong> antes do tempo acabar</p>
+      <p>Evite <strong>25 caixas vermelhas</strong> espalhadas pelo cenário</p>
+      <p>Você tem <strong>3 vidas</strong> - use com sabedoria!</p>
+    </div>
+
+    <div class="info-box">
+      <p style="margin-bottom:10px;color:#2dd4bf;font-weight:700">CONTROLES</p>
+      <p><strong>WASD</strong> Movimento em primeira pessoa</p>
+      <p><strong>Mouse</strong> Olhar ao redor (360°)</p>
+      <p><strong>Espaço</strong> Pular</p>
+      <p><strong>F</strong> Lanterna On/Off</p>
+      <p><strong>M</strong> Mostrar/Ocultar Mini-mapa</p>
+    </div>
+
+    <button id="btn-start">INICIAR JOGO</button>
+    <small style="margin-top:20px;opacity:0.6">Clique na tela para capturar o mouse (Pointer Lock)</small>
+    
+    <div style="margin-top:30px;font-size:12px;color:#64748b">
+      <p>PUC Goiás - Departamento de Computação</p>
+      <p>Prof. MSc. Fernando Gonçalves Abadia</p>
+    </div>
+  </div>
+
+  <!-- HUD Principal -->
+  <div id="hud" class="overlay hidden">
+    <div id="top-hud">
+      <div class="hud-panel">
+        <div class="stat" id="lives">
+          <div class="stat-label">Vidas</div>
+          <div class="stat-value">
+            <span class="stat-icon">💔</span>
+            <span id="lives-value">3</span>
+          </div>
+        </div>
+        
+        <div class="stat" id="score">
+          <div class="stat-label">Pontuação</div>
+          <div class="stat-value">
+            <span class="stat-icon"></span>
+            <span id="score-value">0</span>
+          </div>
+        </div>
+        
+        <div class="stat" id="time">
+          <div class="stat-label">Tempo</div>
+          <div class="stat-value">
+            <span class="stat-icon"></span>
+            <span id="time-value">0</span>s
+          </div>
+        </div>
+      </div>
+
+      <div class="hud-panel" style="min-width:200px">
+        <div class="stat">
+          <div class="stat-label">Status Lanterna</div>
+          <div class="stat-value" style="font-size:20px;color:#fbbf24" id="flashlight-status">
+            
+            <span id="flashlight-text">LIGADA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra de Progresso -->
+    <div id="progress-bar">
+      <div class="progress-label">Progresso da Coleta (Coletáveis: <span id="collected">0</span>/12)</div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+        <div class="progress-text" id="progress-text">0%</div>
+      </div>
+    </div>
+
+    <!-- Crosshair -->
+    <div class="crosshair">
+      <div class="crosshair-center"></div>
+      <div class="crosshair-line h"></div>
+      <div class="crosshair-line v"></div>
+    </div>
+
+    <!-- Feedback Messages -->
+    <div id="feedback"></div>
+
+    <!-- Hint -->
+    <div class="hint" id="hint">Clique para capturar o mouse</div>
+
+    <!-- Mini-mapa -->
+    <div id="minimap" class="hidden">
+      <canvas id="minimap-canvas"></canvas>
+    </div>
+
+    <!-- Info do Projeto -->
+    <div class="project-info">
+      CMP 1170 - Computação Gráfica | Three.js r154 | PBR Materials | Dynamic Lighting
+    </div>
+  </div>
+
+  <!-- Tela final -->
+  <div id="ui-end" class="overlay center hidden">
+    <h1 id="end-title">FIM DE JOGO</h1>
+    <div style="margin:30px 0">
+      <p id="end-msg" style="font-size:26px;margin:15px 0;color:#2dd4bf"></p>
+      <div class="info-box">
+        <p><strong>Pontuação Final:</strong> <span id="final-score">0</span></p>
+        <p><strong>Tempo de Jogo:</strong> <span id="final-time">0</span>s</p>
+        <p><strong>Coletáveis:</strong> <span id="final-collected">0</span>/12</p>
+        <p><strong>Vidas Restantes:</strong> <span id="final-lives">0</span></p>
+      </div>
+    </div>
+    <button id="btn-restart">JOGAR NOVAMENTE</button>
+  </div>
+
+  <!-- Canvas do Three.js -->
+  <canvas id="c"></canvas>
+
+  <!-- Script principal -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
