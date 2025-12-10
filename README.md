@@ -1,7 +1,6 @@
-Aqui está o seu **README.md COMPLETO, DEFINITIVO e LINDO** — pronto para colar no GitHub ou entregar pro professor.  
-Já tem tudo: diagrama Mermaid (fica perfeito no GitHub), preview, requisitos, controles, arquitetura, como rodar e muito mais!
+Claro! Eu revisei o seu README, corrigi pequenos erros de formatação, pontuação, e consistência, sem alterar o conteúdo técnico. Aqui está a versão corrigida:
 
-```markdown
+````markdown
 # Corrida das Caixas 3D
 
 **Trabalho Final – CMP 1170 – Computação Gráfica**  
@@ -13,7 +12,7 @@ Já tem tudo: diagrama Mermaid (fica perfeito no GitHub), preview, requisitos, c
 > Sem Unity, sem Godot, sem Babylon.js — apenas código limpo rodando direto no navegador.
 
 ### Objetivo do Jogo
-Colete **12 esferas douradas** evitando tocar nas 25 caixas vermelhas**.  
+Colete **12 esferas douradas** evitando tocar nas **25 caixas vermelhas**.  
 Você tem apenas **3 vidas** e **3 minutos** para vencer!
 
 ---
@@ -45,7 +44,7 @@ graph TD
 
     subgraph "Three.js Scene"
         S1 --> Scene[Scene + Fog Exp2]
-        S2 --> Lights[DirectionalLight (sol)<br>SpotLight (Lanterna)<br>PointLights (esferas)<br>AmbientLight]
+        S2 --> Lights[DirectionalLight (sol)<br>SpotLight (lanterna)<br>PointLights (esferas)<br>AmbientLight]
         S3 --> Floor[Chão PBR 120×120]
         S3 --> Grid[GridHelper]
         S3 --> Walls[Paredes Invisíveis]
@@ -61,60 +60,59 @@ graph TD
     style LOOP fill:#2dd4bf,stroke:#fff,color:#000,font-weight:bold
     style Renderer fill:#0d9488a6,stroke:#fff,color:#fff
     style Canvas fill:#000,stroke:#2dd4bf,stroke-width:4px
-```
+````
 
 ---
 
 ## Requisitos da Disciplina – 100% Atendidos
 
-| Requisito                            | Status | Implementação                                      |
-|--------------------------------------|--------|----------------------------------------------------|
-| Primitivas geométricas               | Done   | Box, Sphere, Plane                                 |
-| Materiais PBR                        | Done   | MeshStandardMaterial (roughness, metalness, emissive) |
-| Iluminação direcional + dinâmica     | Done   | DirectionalLight + SpotLight (lanterna do jogador) |
-| Sombras em tempo real                | Done   | PCFSoftShadowMap + bias otimizado                  |
-| HUD completo e funcional             | Done   | Vidas • Pontos • Tempo • Barra de progresso • Mini-mapa |
-| Câmera em primeira pessoa            | Done   | WASD + Mouse 360° + Pointer Lock API               |
-| Física básica (gravidade + pulo)     | Done   | Simulação simples com delta time                   |
-| Telas de início, jogo e fim          | Done   | Com estatísticas finais detalhadas                 |
-| Código organizado e comentado        | Done   | Separado em 3 arquivos limpos                      |
+| Requisito                        | Status | Implementação                                           |
+| -------------------------------- | ------ | ------------------------------------------------------- |
+| Primitivas geométricas           | Done   | Box, Sphere, Plane                                      |
+| Materiais PBR                    | Done   | MeshStandardMaterial (roughness, metalness, emissive)   |
+| Iluminação direcional + dinâmica | Done   | DirectionalLight + SpotLight (lanterna do jogador)      |
+| Sombras em tempo real            | Done   | PCFSoftShadowMap + bias otimizado                       |
+| HUD completo e funcional         | Done   | Vidas • Pontos • Tempo • Barra de progresso • Mini-mapa |
+| Câmera em primeira pessoa        | Done   | WASD + Mouse 360° + Pointer Lock API                    |
+| Física básica (gravidade + pulo) | Done   | Simulação simples com delta time                        |
+| Telas de início, jogo e fim      | Done   | Com estatísticas finais detalhadas                      |
+| Código organizado e comentado    | Done   | Separado em 3 arquivos limpos                           |
 
 ---
 
 ## Recursos Extras (Bônus)
 
-- Mini-mapa em tempo real (tecla **M**)
-- Lanterna toggle (tecla **F**)
-- Feedback visual em colisões (tela vermelha + mensagem)
-- Esferas com animação de flutuação + rotação + luz pulsante
-- UI moderna com glow, blur e gradientes
-- Responsivo (funciona em celular e desktop)
+* Mini-mapa em tempo real (tecla **M**)
+* Lanterna toggle (tecla **F**)
+* Feedback visual em colisões (tela vermelha + mensagem)
+* Esferas com animação de flutuação + rotação + luz pulsante
+* UI moderna com glow, blur e gradientes
+* Responsivo (funciona em celular e desktop)
 
 ---
 
 ## Controles do Jogo
 
-| Tecla        | Ação                              |
-| 
-|--------------|-----------------------------------|
-| **WASD** ou Setas | Mover                          |
-| **Mouse**     | Olhar 360°                        |
-| **Espaço**    | Pular                             |
-| **F**         | Ligar/Desligar lanterna           |
-| **M**         | Mostrar/Ocultar mini-mapa         |
-| **Clique**    | Capturar o mouse (Pointer Lock)   |
+| Tecla             | Ação                            |
+| ----------------- | ------------------------------- |
+| **WASD** ou Setas | Mover                           |
+| **Mouse**         | Olhar 360°                      |
+| **Espaço**        | Pular                           |
+| **F**             | Ligar/Desligar lanterna         |
+| **M**             | Mostrar/Ocultar mini-mapa       |
+| **Clique**        | Capturar o mouse (Pointer Lock) |
 
 ---
 
 ## Tecnologias Utilizadas
 
-- Three.js r154 (CDN)
-- HTML5 + CSS3 moderno
-- JavaScript ES6 Modules
-- Pointer Lock API
-- Canvas 2D (mini-mapa)
-- WebGL 2 + sombras suaves
-- ACESFilmic Tone Mapping
+* Three.js r154 (CDN)
+* HTML5 + CSS3 moderno
+* JavaScript ES6 Modules
+* Pointer Lock API
+* Canvas 2D (mini-mapa)
+* WebGL 2 + sombras suaves
+* ACESFilmic Tone Mapping
 
 ---
 
@@ -123,7 +121,7 @@ graph TD
 ```
 corridacaixas/
 ├── index.html       # Estrutura + telas
-├── style.css        # Todo o visual (HUD/UI
+├── style.css        # Todo o visual (HUD/UI)
 ├── main.js          # Lógica completa do jogo
 ├── preview.jpg      # (opcional) Print do jogo
 └── README.md        # Este arquivo
@@ -133,26 +131,32 @@ corridacaixas/
 
 ## Como Executar
 
-1. Baixe os 3 arquivos principais  
-2. Abra o `index.html` no **Google Chrome** ou **Firefox**  
-3. Clique em **INICIAR JOGO**  
-4. Clique na tela para travar o mouse  
-5. Jogue e arrase!
+1. Baixe os 3 arquivos principais.
+2. Abra o `index.html` no **Google Chrome** ou **Firefox**.
+3. Clique em **INICIAR JOGO**.
+4. Clique na tela para travar o mouse.
+5. Jogue e divirta-se!
 
 ---
 
-**Desenvolvido com carinho por [SEU NOME COMPLETO]**  
-**Disciplina:** CMP 1170 – Computação Gráfica  
-**Instituição:** PUC Goiás  
+**Desenvolvido com carinho por [SEU NOME COMPLETO]**
+**Disciplina:** CMP 1170 – Computação Gráfica
+**Instituição:** PUC Goiás
 **Ano:** 2025
 
 Projeto 100% funcional • Zero dependências externas • Pronto para nota 10!
 
 Boa apresentação, você merece!
+
 ```
 
-É só copiar **tudo isso**, salvar como `README.md` na pasta do projeto e abrir no GitHub — vai ficar INCRÍVEL (o diagrama Mermaid aparece animado e colorido automaticamente).
+✅ Alterações principais:
+- Corrigi `25 caixas vermelhas**` → `**25 caixas vermelhas**`.
+- Padronizei pontuação e formatação de listas.
+- Ajustei pequenos erros de Markdown (como parênteses, espaços e indentação).
+- Pequenas melhorias na legibilidade das instruções.
 
-Se quiser, me manda uma foto do jogo rodando que eu coloco como `preview.jpg` e deixo perfeito de vez
+Se você quiser, posso preparar uma **versão ainda mais chamativa**, com cores nos badges de status, emojis e destaques para deixar o README com cara de projeto profissional de portfólio.  
 
-Vai com tudo, campeão!
+Quer que eu faça isso?
+```
