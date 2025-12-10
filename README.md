@@ -16,40 +16,61 @@ Você tem apenas **3 vidas** e **3 minutos** para vencer!
 
 ## Diagrama da Arquitetura do Jogo
 
-```mermaid
 graph TD
     A[index.html - Telas + UI] -->|carrega| B[style.css - HUD + Design]
-    A -->|import module| C[main.js - Logica completa]
+    A -->|import module| C[main.js - Lógica completa]
 
     subgraph "Camada Visual"
-        A --> UI1[Tela Inicial]
-        A --> UI2[HUD + Mini-mapa + Crosshair]
-        A --> UI3[Tela Final + Estatisticas]
+        UI1[Tela Inicial]
+        UI2[HUD + Mini-mapa + Crosshair]
+        UI3[Tela Final + Estatísticas]
+        A --> UI1
+        A --> UI2
+        A --> UI3
     end
 
-    subgraph "Logica do Jogo - main.js"
-        C --> S1[Configuracao da Cena]
-        C --> S2[Iluminacao Avancada]
-        C --> S3[Spawners Procedurais]
-        C --> S4[Controles + Pointer Lock]
-        C --> S5[Fisica & Colisao]
-        C --> S6[HUD + Feedback]
-        C --> S7[Mini-mapa 2D]
-        C --> S8[Game State]
-        C --> LOOP[Game Loop - tick()]
+    subgraph "Lógica do Jogo - main.js"
+        S1[Configuração da Cena]
+        S2[Iluminação Avançada]
+        S3[Spawners Procedurais]
+        S4[Controles + Pointer Lock]
+        S5[Física & Colisão]
+        S6[HUD + Feedback]
+        S7[Mini-mapa 2D]
+        S8[Game State]
+        LOOP[Game Loop - tick()]
+        C --> S1
+        C --> S2
+        C --> S3
+        C --> S4
+        C --> S5
+        C --> S6
+        C --> S7
+        C --> S8
+        C --> LOOP
     end
 
     subgraph "Three.js Scene"
-        S1 --> Scene[Scene + Fog Exp2]
-        S2 --> Lights[DirectionalLight (sol), SpotLight (lanterna), PointLights (esferas), AmbientLight]
-        S3 --> Floor[Chao PBR 120x120]
-        S3 --> Grid[GridHelper]
-        S3 --> Walls[Paredes Invisiveis]
-        S3 --> Player[playerGroup]
-        S3 --> Obstacles[25 Caixas Vermelhas]
-        S3 --> Collectibles[12 Esferas Douradas + Luzes]
-        Scene --> Camera[Camera Primeira Pessoa]
-        Scene --> Renderer[WebGL + Sombras + ACESFilmic]
+        Scene[Scene + Fog Exp2]
+        Lights[DirectionalLight, SpotLight, PointLights, AmbientLight]
+        Floor[Chão PBR 120x120]
+        Grid[GridHelper]
+        Walls[Paredes Invisíveis]
+        Player[playerGroup]
+        Obstacles[25 Caixas Vermelhas]
+        Collectibles[12 Esferas Douradas + Luzes]
+        Camera[Camera Primeira Pessoa]
+        Renderer[WebGL + Sombras + ACESFilmic]
+        S1 --> Scene
+        S2 --> Lights
+        S3 --> Floor
+        S3 --> Grid
+        S3 --> Walls
+        S3 --> Player
+        S3 --> Obstacles
+        S3 --> Collectibles
+        Scene --> Camera
+        Scene --> Renderer
     end
 
     LOOP --> Renderer --> Canvas[canvas id=c]
@@ -58,7 +79,6 @@ graph TD
     style Renderer fill:#0d9488,stroke:#fff,color:#fff
     style Canvas fill:#000,stroke:#2dd4bf,stroke-width:4px
 
-```
 
 ## Requisitos da Disciplina – 100% Atendidos
 
