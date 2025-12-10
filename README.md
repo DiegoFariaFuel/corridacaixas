@@ -58,7 +58,7 @@ graph TD
     style Renderer fill:#0d9488a6,stroke:#fff,color:#fff
     style Canvas fill:#000,stroke:#2dd4bf,stroke-width:4px
 
-````
+```
 
 ## Requisitos da Disciplina – 100% Atendidos
 
