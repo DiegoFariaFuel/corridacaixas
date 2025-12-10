@@ -18,28 +18,29 @@ Você tem apenas **3 vidas** e **3 minutos** para vencer!
 
 ```mermaid
 graph TD
-    A[index.html<br/>Telas + UI] -->|carrega| B[style.css<br/>HUD + Design]
-    A -->|import module| C[main.js<br/>Lógica completa]
+    A["index.html<br/>Telas + UI"] -->|carrega| B["style.css<br/>HUD + Design"]
+    A -->|import module| C["main.js<br/>Lógica completa"]
 
     subgraph "Camada Visual"
-        UI1[Tela Inicial]
-        UI2[HUD + Mini-mapa + Crosshair]
-        UI3[Tela Final + Estatísticas]
+        UI1["Tela Inicial"]
+        UI2["HUD + Mini-mapa + Crosshair"]
+        UI3["Tela Final + Estatísticas"]
         A --> UI1
         A --> UI2
         A --> UI3
     end
 
     subgraph "Lógica do Jogo - main.js"
-        S1[Configuração da Cena]
-        S2[Iluminação Avançada]
-        S3[Spawners Procedurais]
-        S4[Controles + Pointer Lock]
-        S5[Física & Colisão]
-        S6[HUD + Feedback]
-        S7[Mini-mapa 2D]
-        S8[Game State]
-        LOOP[Game Loop - tick()]
+        S1["Configuração da Cena"]
+        S2["Iluminação Avançada"]
+        S3["Spawners Procedurais"]
+        S4["Controles + Pointer Lock"]
+        S5["Física & Colisão"]
+        S6["HUD + Feedback"]
+        S7["Mini-mapa 2D"]
+        S8["Game State"]
+        LOOP["Game Loop<br/>tick()"]
+        
         C --> S1
         C --> S2
         C --> S3
@@ -52,16 +53,17 @@ graph TD
     end
 
     subgraph "Three.js Scene"
-        Scene[Scene + Fog Exp2]
-        Lights[DirectionalLight, SpotLight, PointLights, AmbientLight]
-        Floor[Chão PBR 120x120]
-        Grid[GridHelper]
-        Walls[Paredes Invisíveis]
-        Player[playerGroup]
-        Obstacles[25 Caixas Vermelhas]
-        Collectibles[12 Esferas Douradas + Luzes]
-        Camera[Camera Primeira Pessoa]
-        Renderer[WebGL + Sombras + ACESFilmic]
+        Scene["Scene + Fog Exp2"]
+        Lights["DirectionalLight, SpotLight, PointLights, AmbientLight"]
+        Floor["Chão PBR 120x120"]
+        Grid["GridHelper"]
+        Walls["Paredes Invisíveis"]
+        Player["playerGroup"]
+        Obstacles["25 Caixas Vermelhas"]
+        Collectibles["12 Esferas Douradas + Luzes"]
+        Camera["Camera Primeira Pessoa"]
+        Renderer["WebGL + Sombras + ACESFilmic"]
+        
         S1 --> Scene
         S2 --> Lights
         S3 --> Floor
@@ -74,7 +76,7 @@ graph TD
         Scene --> Renderer
     end
 
-    LOOP --> Renderer --> Canvas[canvas id=c]
+    LOOP --> Renderer --> Canvas["canvas id=c"]
 
     %% Classes de estilo
     classDef html fill:#f16529,color:#fff
@@ -93,7 +95,6 @@ graph TD
     class LOOP loop
     class Renderer renderer
     class Canvas canvas
-
 
 ```
 
