@@ -1,6 +1,4 @@
-Claro! Eu revisei o seu README, corrigi pequenos erros de formatação, pontuação, e consistência, sem alterar o conteúdo técnico. Aqui está a versão corrigida:
 
-````markdown
 # Corrida das Caixas 3D
 
 **Trabalho Final – CMP 1170 – Computação Gráfica**  
@@ -15,7 +13,6 @@ Claro! Eu revisei o seu README, corrigi pequenos erros de formatação, pontuaç
 Colete **12 esferas douradas** evitando tocar nas **25 caixas vermelhas**.  
 Você tem apenas **3 vidas** e **3 minutos** para vencer!
 
----
 
 ## Diagrama da Arquitetura do Jogo
 
