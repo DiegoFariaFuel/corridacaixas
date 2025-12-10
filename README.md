@@ -177,5 +177,3 @@ corridacaixas/
 **Disciplina:** CMP 1170 – Computação Gráfica
 **Instituição:** PUC Goiás
 **Ano:** 2025
-
-```
