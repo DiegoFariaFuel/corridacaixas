@@ -16,50 +16,49 @@ Você tem apenas **3 vidas** e **3 minutos** para vencer!
 
 ## Diagrama da Arquitetura do Jogo
 
-
+```mermaid
 graph TD
-    A[index.html<br>Telas + UI] -->|carrega| B[style.css<br>HUD + Design]
-    A -->|import module| C[main.js<br>Lógica completa]
+    A[index.html - Telas + UI] -->|carrega| B[style.css - HUD + Design]
+    A -->|import module| C[main.js - Logica completa]
 
     subgraph "Camada Visual"
         A --> UI1[Tela Inicial]
         A --> UI2[HUD + Mini-mapa + Crosshair]
-        A --> UI3[Tela Final + Estatísticas]
+        A --> UI3[Tela Final + Estatisticas]
     end
 
-    subgraph "Lógica do Jogo – main.js"
-        C --> S1[Configuração da Cena]
-        C --> S2[Iluminação Avançada]
+    subgraph "Logica do Jogo - main.js"
+        C --> S1[Configuracao da Cena]
+        C --> S2[Iluminacao Avancada]
         C --> S3[Spawners Procedurais]
         C --> S4[Controles + Pointer Lock]
-        C --> S5[Física & Colisão]
+        C --> S5[Fisica & Colisao]
         C --> S6[HUD + Feedback]
         C --> S7[Mini-mapa 2D]
         C --> S8[Game State]
-        C --> LOOP[Game Loop – tick()]
+        C --> LOOP[Game Loop - tick()]
     end
 
     subgraph "Three.js Scene"
         S1 --> Scene[Scene + Fog Exp2]
-        S2 --> Lights[DirectionalLight (sol)<br>SpotLight (lanterna)<br>PointLights (esferas)<br>AmbientLight]
-        S3 --> Floor[Chão PBR 120×120]
+        S2 --> Lights[DirectionalLight (sol), SpotLight (lanterna), PointLights (esferas), AmbientLight]
+        S3 --> Floor[Chao PBR 120x120]
         S3 --> Grid[GridHelper]
-        S3 --> Walls[Paredes Invisíveis]
+        S3 --> Walls[Paredes Invisiveis]
         S3 --> Player[playerGroup]
         S3 --> Obstacles[25 Caixas Vermelhas]
         S3 --> Collectibles[12 Esferas Douradas + Luzes]
-        Scene --> Camera[Câmera Primeira Pessoa]
+        Scene --> Camera[Camera Primeira Pessoa]
         Scene --> Renderer[WebGL + Sombras + ACESFilmic]
     end
 
-    LOOP --> Renderer --> Canvas[<canvas id="c">]
+    LOOP --> Renderer --> Canvas[canvas id="c"]
 
     style LOOP fill:#2dd4bf,stroke:#fff,color:#000,font-weight:bold
     style Renderer fill:#0d9488a6,stroke:#fff,color:#fff
     style Canvas fill:#000,stroke:#2dd4bf,stroke-width:4px
 
-
----
+````
 
 ## Requisitos da Disciplina – 100% Atendidos
 
