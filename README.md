@@ -173,7 +173,7 @@ corridacaixas/
 
 ---
 
-Desenvolvido por
+**Desenvolvido por**
 
 Diego Faria
 
@@ -184,11 +184,3 @@ Adriano Oliveira Barreto
 Disciplina
 
 CMP 1170 – Computação Gráfica
-
-Instituição
-
-PUC Goiás
-
-Ano
-
-2025
