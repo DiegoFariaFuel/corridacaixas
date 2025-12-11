@@ -174,9 +174,15 @@ corridacaixas/
 ---
 
 **Desenvolvido : Diego Faria**
+
+---
 Diego Faria
+
+
 Walker Freitas dos Santos
 Adriano Oliveira Barreto
+---
+
 **Disciplina:** CMP 1170 – Computação Gráfica
 **Instituição:** PUC Goiás
 **Ano:** 2025
