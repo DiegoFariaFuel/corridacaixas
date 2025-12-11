@@ -2,7 +2,17 @@
 # Corrida das Caixas 3D
 
 **Trabalho Final – CMP 1170 – Computação Gráfica**  
-**PUC Goiás** • Prof. MSc. Fernando Gonçalves Abadia • 2025  
+**PUC Goiás** • Prof. MSc. Fernando Gonçalves Abadia • 2025 
+
+**Desenvolvido por**
+
+Diego Faria
+
+Walker Freitas dos Santos
+
+Adriano Oliveira Barreto
+
+
 
 ![Preview do Jogo](preview.png)
 
@@ -173,14 +183,4 @@ corridacaixas/
 
 ---
 
-**Desenvolvido por**
 
-Diego Faria
-
-Walker Freitas dos Santos
-
-Adriano Oliveira Barreto
-
-Disciplina
-
-CMP 1170 – Computação Gráfica
